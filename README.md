@@ -26,6 +26,16 @@ The goal is to understand how images are represented and processed as numerical 
 
 ---
 
+## Image Processing Techniques
+- Gaussian blurring to reduce noise
+- Canny edge detection for object boundaries
+- Sobel filters to detect directional edges
+
+## Key Learnings
+- Noise affects edge detection
+- Blurring improves edge quality
+- Edges represent important visual features
+
 ## Project Structure
 
 classic-computer-vision/
@@ -33,6 +43,9 @@ classic-computer-vision/
 │ └── sample.jpg
 ├── load_image.py
 ├── preprocess.py
+├── blur.py
+├── edges.py
+├── sobel.py
 ├── README.md
 
 ## What I Learned
