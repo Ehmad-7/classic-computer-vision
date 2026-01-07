@@ -36,6 +36,20 @@ The goal is to understand how images are represented and processed as numerical 
 - Blurring improves edge quality
 - Edges represent important visual features
 
+---
+
+## Feature Extraction with HOG
+
+- Implemented Histogram of Oriented Gradients (HOG)
+- Used SVM for digit classification
+- Demonstrates classic CV + ML pipeline before CNNs
+
+## Why This Matters
+- Shows how features represent image structure
+- Helps understand how CNNs learn similar patterns automatically
+
+---
+
 ## Project Structure
 
 classic-computer-vision/
@@ -46,6 +60,7 @@ classic-computer-vision/
 ├── blur.py
 ├── edges.py
 ├── sobel.py
+├── hog_svm_digits.py
 ├── README.md
 
 ## What I Learned
