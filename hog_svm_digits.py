@@ -15,8 +15,9 @@ y=digits.target
 hog_features=[]
 
 for img in x:
+    img = (img / img.max()) * 255
     img=img.astype("uint8") 
-    img=cv2.resize(img,(32,32))
+    img=cv2.resize(img,(32,32),interpolation=cv2.INTER_CUBIC)
     features=hog(
         img,
         orientations=9,
@@ -29,7 +30,7 @@ for img in x:
 hog_features=np.array(hog_features)
 
 x_train,x_test,y_train,y_test=train_test_split(
-    hog_features,y,test_size=0.2,random_state=42
+    hog_features,y,test_size=0.2,random_state=42,stratify=y
 )
 
 classifier=svm.SVC(kernel='linear')
